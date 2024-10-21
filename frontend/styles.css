@@ -1,14 +1,28 @@
 /* Estilo base para dispositivos móviles */
 /* Diseño Mobile-First */
+@font-face {
+    font-family: 'PokemonSolid';
+    src: url('fonts/Moltors-eZzgm.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poke';
+    src: url('fonts/PokemonPixels2-59jx.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
     color: #333;
     margin: 0;
-    padding: 20px;
+    padding: 0; /* Eliminamos el padding */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Para que el contenido comience más arriba */
     min-height: 100vh;
 }
 
@@ -21,16 +35,17 @@ body {
     width: 100%;
     max-width: 400px;
     text-align: center;
+    margin-top: 10px; /* Ajustamos el margen superior del contenedor para que sea más pequeño */
 }
 
 /* Logo del encabezado */
 .logo {
     text-align: center;
-    padding: 10px;
+    padding: 10px; /* Ajustamos el padding */
 }
 
 .header-image {
-    width: 80px;
+    width: 150px; /* Aumentamos el tamaño de la imagen */
     height: auto;
     margin-bottom: 15px;
 }
@@ -142,4 +157,21 @@ button:hover {
         padding: 18px;
         font-size: 1.2rem;
     }
+}
+
+.poke1 {
+    font-family: 'Poke'; /* Usar la fuente importada */
+    font-size: 3rem; /* Tamaño de la fuente */
+    color: #ff7e5f; /* Color del texto */
+    margin-bottom: 10px; /* Espaciado debajo del logotipo */
+    letter-spacing: 2px;
+}
+
+.poke-logo {
+    font-family: 'PokemonSolid'; /* Usar la fuente importada */
+    font-size: 3rem; /* Tamaño de la fuente */
+    color: #ff7e5f; /* Color del texto */
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5); /* Añadir sombra para mayor efecto */
+    margin-bottom: 10px; /* Espaciado debajo del logotipo */
+    letter-spacing: 2px;
 }
