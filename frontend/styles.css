@@ -16,7 +16,11 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    background-image: url(assests/fondo7.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #333;
     margin: 0;
     padding: 0; /* Eliminamos el padding */
@@ -47,7 +51,7 @@ body {
 /* Título principal */
 h1 {
     font-size: 1.2rem; /* Reducimos el tamaño de la fuente */
-    color: #ff7e5f;
+    color: #5fff82;
     margin-bottom: 0.5rem; /* Reducimos el margen inferior */
 }
 
@@ -79,12 +83,12 @@ input, select {
 
 /* Efecto hover en los inputs y select */
 input:hover, select:hover {
-    border-color: #ff7e5f;
+    border-color: #5fff82;
 }
 
 /* Estilo de los botones */
 button {
-    background-color: #ff7e5f;
+    background-color: #5fff82;
     color: white;
     border: none;
     padding: 10px; /* Reducimos el padding */
@@ -97,7 +101,7 @@ button {
 
 /* Efecto hover en los botones */
 button:hover {
-    background-color: #feb47b;
+    background-color: #5ee47b;
     transform: translateY(-1px); /* Reducimos la transformación */
 }
 
@@ -110,6 +114,7 @@ button:hover {
 /* Media Queries para pantallas más grandes */
 @media (min-width: 768px) {
     /* Contenedor más amplio */
+
     .container {
         max-width: 450px; /* Ajustamos el ancho máximo */
         padding: 25px; /* Ajustamos el padding */
@@ -134,7 +139,7 @@ button:hover {
 @media (min-width: 1024px) {
     /* Contenedor más amplio para pantallas grandes */
     .container {
-        max-width: 550px; /* Ajustamos el ancho máximo */
+        max-width: 500px; /* Ajustamos el ancho máximo */
         padding: 30px; /* Ajustamos el padding */
     }
 
@@ -143,12 +148,12 @@ button:hover {
     }
 
     input, select {
-        padding: 15px; /* Ajustamos el padding */
+        padding: 10px; /* Ajustamos el padding */
         font-size: 1.1rem; /* Ajustamos el tamaño de la fuente */
     }
 
     button {
-        padding: 15px; /* Ajustamos el padding */
+        padding: 10px; /* Ajustamos el padding */
         font-size: 1.1rem; /* Ajustamos el tamaño de la fuente */
     }
 }
@@ -156,7 +161,7 @@ button:hover {
 .poke1 {
     font-family: 'Poke'; /* Usar la fuente importada */
     font-size: 2.5rem; /* Reducimos el tamaño de la fuente */
-    color: #ff7e5f; /* Color del texto */
+    color: #55e073; /* Color del texto */
     margin-bottom: 10px; /* Espaciado debajo del logotipo */
     letter-spacing: 1px; /* Reducimos el espaciado entre letras */
 }
@@ -164,7 +169,7 @@ button:hover {
 .poke-logo {
     font-family: 'PokemonSolid'; /* Usar la fuente importada */
     font-size: 2.5rem; /* Reducimos el tamaño de la fuente */
-    color: #ff7e5f; /* Color del texto */
+    color: #55e073; /* Color del texto */
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5); /* Reducimos la sombra para mayor efecto */
     margin-bottom: 10px; /* Espaciado debajo del logotipo */
     letter-spacing: 1px; /* Reducimos el espaciado entre letras */
