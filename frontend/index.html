@@ -2,35 +2,74 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-	<link rel="icon" href="assests/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador de Pokémon</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Enlazamos el CSS -->
+    <title>PokeApi</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlazamos el CSS moderno -->
+    <!-- Fuente moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-	<div class="logo">
-		<img src="assests/PokeApi.png" class="header_image">
-	
-    	<div class="container">
-    	    <h1>Generador de Pokémon</h1>
-    	    <form id="pokemonForm">
-    	        <label for="prompt">Nombre:</label>
-    	        <input type="text" id="prompt" required>
+    <div class="container">
+        <div class="logo">
+            <img src="assests/PokeApi.png" class="header-image">
+        </div>
+        <h1>Generador de Pokémon</h1>
+        <form id="pokemonForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
 
-    	        <label for="num_outputs">Número de Salidas:</label>
-    	        <input type="number" id="num_outputs" value="1" min="1" required>
+            <label for="tipo1">Tipo:</label>
+            <select id="tipo1" required>
+                <option value="" disabled selected>Selecciona un tipo</option>
+                <option value="agua">Agua</option>
+				<option value="fuego">Fuego</option>
+				<option value="planta">Planta</option>
+				<option value="eléctrico">Eléctrico</option>
+				<option value="volador">Volador</option>
+				<option value="tierra">Tierra</option>
+				<option	value="psíquico">Psíquico</option>
+				<option value="roca">Roca</option>
+				<option value="dragón">Dragón</option>
+				<option value="bicho">Bicho</option>
+				<option value="hada">Hada</option>
+				<option value="lucha">Lucha</option>
+				<option value="fantasma">Fantasma</option>
+				<option	value="hielo">Hielo</option>
+				<option value="normal">Normal</option>
+				<option value="veneno">Veneno</option>
+				<option value="acero">Acero</option>
+            </select>
 
-    	        <label for="guidance_scale">Escala de Orientación:</label>
-    	        <input type="number" id="guidance_scale" value="7.5" step="0.1" required>
+            <label for="tipo2">Tipo 2 (Opcional):</label>
+            <select id="tipo2">
+                <option value="" disabled selected>Selecciona un tipo secundario</option>
+				<option value="agua">Agua</option>
+				<option value="fuego">Fuego</option>
+				<option value="planta">Planta</option>
+				<option value="eléctrico">Eléctrico</option>
+				<option value="volador">Volador</option>
+				<option value="tierra">Tierra</option>
+				<option	value="psíquico">Psíquico</option>
+				<option value="roca">Roca</option>
+				<option value="dragón">Dragón</option>
+				<option value="bicho">Bicho</option>
+				<option value="hada">Hada</option>
+				<option value="lucha">Lucha</option>
+				<option value="fantasma">Fantasma</option>
+				<option	value="hielo">Hielo</option>
+				<option value="normal">Normal</option>
+				<option value="veneno">Veneno</option>
+				<option value="acero">Acero</option>
+            </select>
 
-    	        <label for="num_inference_steps">Pasos de Inferencia:</label>
-    	        <input type="number" id="num_inference_steps" value="50" required>
+            <label for="color">Color:</label>
+            <input type="text" id="color" required>
 
-    	        <button type="submit">Crear Pokémon</button>
-    	    </form>
-    	    <div id="result" class="result"></div>
-    	</div>
-	</div>
+            <button type="submit">Crear Pokémon</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
     <script src="script.js"></script> <!-- Enlazamos el JS -->
 </body>
 </html>

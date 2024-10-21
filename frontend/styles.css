@@ -1,70 +1,145 @@
+/* Estilo base para dispositivos móviles */
+/* Diseño Mobile-First */
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to top, #ff7e5f, #feb47b);
-    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    color: #333;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
+/* Contenedor del formulario */
 .container {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(255, 255, 255, 0.85);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    width: 300px;
-}
-
-.logo {
-	text-align: center;
-	padding: 20px;
-}
-
-.header-image {
-    width: 100px; /* Ajusta el tamaño de la imagen */
-    height: auto; /* Mantener la relación de aspecto */
-    margin-bottom: 20px; /* Espaciado debajo de la imagen */
-}
-
-
-h1 {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
     text-align: center;
 }
 
+/* Logo del encabezado */
+.logo {
+    text-align: center;
+    padding: 10px;
+}
+
+.header-image {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Título principal */
+h1 {
+    font-size: 1.5rem;
+    color: #ff7e5f;
+    margin-bottom: 1rem;
+}
+
+/* Formulario con estructura vertical */
 form {
     display: flex;
     flex-direction: column;
 }
 
+/* Labels de los inputs */
 label {
     margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
 }
 
-input {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
+/* Estilo de los inputs y selectores */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
 }
 
+/* Efecto hover en los inputs y select */
+input:hover, select:hover {
+    border-color: #ff7e5f;
+}
+
+/* Estilo de los botones */
 button {
-    background-color: #feb47b;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-button:hover {
     background-color: #ff7e5f;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    width: 100%;
 }
 
+/* Efecto hover en los botones */
+button:hover {
+    background-color: #feb47b;
+    transform: translateY(-2px);
+}
+
+/* Resultados */
 .result {
     margin-top: 20px;
     text-align: center;
+}
+
+/* Media Queries para pantallas más grandes */
+@media (min-width: 768px) {
+    /* Contenedor más amplio */
+    .container {
+        max-width: 500px;
+        padding: 30px;
+    }
+
+    /* Ajuste del tamaño de la fuente */
+    h1 {
+        font-size: 2rem;
+    }
+
+    input, select {
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+
+    button {
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Contenedor más amplio para pantallas grandes */
+    .container {
+        max-width: 600px;
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    input, select {
+        padding: 18px;
+        font-size: 1.2rem;
+    }
+
+    button {
+        padding: 18px;
+        font-size: 1.2rem;
+    }
 }

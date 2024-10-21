@@ -1,10 +1,29 @@
+document.getElementById('tipo1').addEventListener('change', function() {
+    const tipo1Value = this.value; // Obtiene el valor seleccionado en Tipo 1
+    const tipo2 = document.getElementById('tipo2');
+    
+    // Habilita todas las opciones en Tipo 2 antes de hacer los cambios
+    for (let option of tipo2.options) {
+        option.disabled = false; // Habilita todas las opciones
+    }
+
+    // Si hay una opción seleccionada en Tipo 1, la deshabilita en Tipo 2
+    if (tipo1Value) {
+        for (let option of tipo2.options) {
+            if (option.value === tipo1Value) {
+                option.disabled = true; // Deshabilita la opción seleccionada en Tipo 1
+            }
+        }
+    }
+});
+
 document.getElementById('pokemonForm').addEventListener('submit', async function(event) {
     event.preventDefault(); // Evita que la página se recargue al enviar el formulario
 
-    const prompt = document.getElementById('prompt').value;
-    const num_outputs = document.getElementById('num_outputs').value;
-    const guidance_scale = document.getElementById('guidance_scale').value;
-    const num_inference_steps = document.getElementById('num_inference_steps').value;
+    const nombre = document.getElementById('nombre').value;
+    const tipo1 = document.getElementById('tipo1').value;
+    const tipo2 = document.getElementById('tipo2').value;
+    const color = document.getElementById('color').value;
 
     try {
         const response = await fetch('http://localhost:4001/create', {
@@ -13,10 +32,10 @@ document.getElementById('pokemonForm').addEventListener('submit', async function
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                prompt,
-                num_outputs,
-                guidance_scale,
-                num_inference_steps
+                nombre,
+                tipo1,
+                tipo2,
+                color
             })
         });
 
