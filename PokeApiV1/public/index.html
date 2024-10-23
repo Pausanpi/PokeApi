@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assests/logo.png"/>
+    <title>PokeApi</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlazamos el CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="poke1">C</h1>
+        <h1 class="poke-logo">Generador de Pokémon</h1>
+        
+        <form id="pokemonForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="color">Color:</label>
+            <select id="color" required>
+                <option value="" disabled selected>Selecciona un color</option>
+                <option value="#ff0000">Rojo</option>
+                <option value="#00ff00">Verde</option>
+                <option value="#0000ff">Azul</option>
+                <option value="#ffff00">Amarillo</option>
+                <option value="#ff00ff">Rosa</option>
+                <option value="#00ffff">Cian</option>
+                <option value="#000000">Negro</option>
+                <option value="#ffffff">Blanco</option>
+				<option	value="">Sin color</option>
+            </select>
+
+            <button type="submit">Crear Pokémon</button>
+        </form>
+
+        <!-- Canvas para mostrar la imagen del Pokémon modificada -->
+		<div class="pokeGenerado">
+			<canvas id="pokemonCanvas" width="300" height="300"></canvas>
+		</div>
+
+		<div class="statistics">
+			<canvas id="statsChart" width="400" height="200"></canvas>
+		</div>
+
+        <button id="logoutBtn">Cerrar sesión</button> <!-- Botón para cerrar sesión -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
