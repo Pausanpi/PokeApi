@@ -4,4 +4,4 @@ El proyecto tiene dos versiones:
 
 *V2: Usa ia que genera imágenes pero no tiene autentificación
 
-![image](https://github.com/user-attachments/assets/aa79aadd-2f68-4bc4-b5d1-fc783846beac)
+<img src="https://www.deviantart.com/senso88/art/810-Grookey-950662968"/>
