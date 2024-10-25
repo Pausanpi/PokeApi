@@ -1,12 +1,10 @@
 :root {
-	--author: "Matt Cannon";
-	--contact: "mc@mattcannon.design";
-	--description: "An AI Powered Jack-O'-Lantern generator that carves pumpkins with a sprinkle of magic and a dash of mischief. I left the dropdowns a bit wide so that you can edit the prompts to your hearts content if desired. Have fun!";
-	--keywords: "codepenchallenge, cpc-halloween-pumpkins, ai, jackolantern, pumpkin, halloween, spooky, generator";
-	--last-modified: "2024-10-08";
+	--author: "pausapi";
+	--contact: "pausanpi1606@gmail.com";
+	--description: "PokeApi";
 	--content-language: "en";
-	--generator: "HTML5, CSS3, JavaScript, jQuery, Pollinations AI API";
-	--title: "AI Jack-O'Lantern Generator";
+	--generator: "HTML5, CSS3, JavaScript, Pollinations AI API";
+	--title: "PokeApi";
   }
 
 @font-face {
